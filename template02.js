@@ -1,16 +1,15 @@
-import React from "react";
+import { FontAwesome5, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  ScrollView,
   FlatList,
   Image,
   Pressable,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
-import { Ionicons, MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
 
 export default function Template02({ navigation }) {
   const categories = [
@@ -52,7 +51,7 @@ export default function Template02({ navigation }) {
     },
   ];
 
-  const renderCategory = ({ item }) => (
+  const renderizarCategoria = ({ item }) => (
     <View style={styles.categoryItem}>
       <View style={styles.categoryCircle}>
         <FontAwesome5 name={item.icon} size={22} color="#fff" />
@@ -61,11 +60,11 @@ export default function Template02({ navigation }) {
     </View>
   );
 
-  const renderDestination = ({ item }) => (
+  const renderizarDestino = ({ item }) => (
     <Image source={{ uri: item.image }} style={styles.imageCard} />
   );
 
-  const renderRecommended = ({ item }) => (
+  const renderizarRecomendacao = ({ item }) => (
     <Image source={{ uri: item.image }} style={styles.recommendedCard} />
   );
 
@@ -113,7 +112,7 @@ export default function Template02({ navigation }) {
 
         <FlatList
           data={categories}
-          renderItem={renderCategory}
+          renderItem={renderizarCategoria}
           keyExtractor={(item) => item.id}
           numColumns={4}
           scrollEnabled={false}
@@ -127,7 +126,7 @@ export default function Template02({ navigation }) {
 
         <FlatList
           data={destinations}
-          renderItem={renderDestination}
+          renderItem={renderizarDestino}
           keyExtractor={(item) => item.id}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -140,7 +139,7 @@ export default function Template02({ navigation }) {
 
         <FlatList
           data={recommended}
-          renderItem={renderRecommended}
+          renderItem={renderizarRecomendacao}
           keyExtractor={(item) => item.id}
           scrollEnabled={false}
           contentContainerStyle={{ paddingHorizontal: 16 }}

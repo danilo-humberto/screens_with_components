@@ -33,14 +33,14 @@ export default function Template01({ navigation }) {
     },
   ];
 
-  const renderCategory = ({ item }) => (
+  const renderizarCategoria = ({ item }) => (
     <View style={styles.categoryCard}>
       <Ionicons name={item.icon} size={28} color="#5A6CF3" />
       <Text style={styles.categoryText}>{item.title}</Text>
     </View>
   );
 
-  const renderDoctor = ({ item }) => (
+  const renderizarDoutor = ({ item }) => (
     <View style={styles.doctorCard}>
       <Ionicons name="person-circle" size={60} color="#ccc" />
 
@@ -94,7 +94,7 @@ export default function Template01({ navigation }) {
 
         <FlatList
           data={categories}
-          renderItem={renderCategory}
+          renderItem={renderizarCategoria}
           keyExtractor={(item) => item.id}
           numColumns={3}
           scrollEnabled={false}
@@ -107,7 +107,7 @@ export default function Template01({ navigation }) {
 
         <FlatList
           data={doctors}
-          renderItem={renderDoctor}
+          renderItem={renderizarDoutor}
           keyExtractor={(item) => item.id}
           scrollEnabled={false}
           contentContainerStyle={{ paddingHorizontal: 16 }}

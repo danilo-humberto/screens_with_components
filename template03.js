@@ -1,15 +1,14 @@
-import React from "react";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
   FlatList,
   Image,
-  ScrollView,
   Pressable,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 export default function Template03({ navigation }) {
   const messages = [
@@ -71,7 +70,7 @@ export default function Template03({ navigation }) {
     },
   ];
 
-  const renderItem = ({ item }) => (
+  const renderizarMensagemCard = ({ item }) => (
     <View style={styles.messageCard}>
       <Image source={{ uri: item.image }} style={styles.avatar} />
 
@@ -130,7 +129,7 @@ export default function Template03({ navigation }) {
       <ScrollView>
         <FlatList
           data={messages}
-          renderItem={renderItem}
+          renderItem={renderizarMensagemCard}
           keyExtractor={(item) => item.id}
           scrollEnabled={false}
           contentContainerStyle={{ padding: 16 }}
