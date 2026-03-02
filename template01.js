@@ -1,15 +1,14 @@
-import React from "react";
+import { Ionicons } from "@expo/vector-icons";
 import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  TextInput,
-  ScrollView,
   FlatList,
   Pressable,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 
 export default function Template01({ navigation }) {
   const categories = [
@@ -88,7 +87,6 @@ export default function Template01({ navigation }) {
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* CATEGORIES */}
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>Categories</Text>
           <Text style={styles.showAll}>Show All</Text>
