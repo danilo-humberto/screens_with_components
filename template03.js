@@ -4,10 +4,9 @@ import {
   Image,
   Pressable,
   SafeAreaView,
-  ScrollView,
   StyleSheet,
   Text,
-  View,
+  View
 } from "react-native";
 
 export default function Template03({ navigation }) {
@@ -126,16 +125,13 @@ export default function Template03({ navigation }) {
         </View>
       </View>
 
-      <ScrollView>
         <FlatList
           data={messages}
           renderItem={renderizarMensagemCard}
           keyExtractor={(item) => item.id}
-          scrollEnabled={false}
           contentContainerStyle={{ padding: 16 }}
         />
         <View style={{ height: 100 }} />
-      </ScrollView>
 
       <View style={styles.bottomNav}>
         <View style={styles.navItem}>
@@ -176,7 +172,7 @@ const styles = StyleSheet.create({
 
   blueShape: {
     position: "absolute",
-    left: -120,
+    left: -130,
     top: -120,
     width: 300,
     height: 300,
